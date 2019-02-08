@@ -7,9 +7,10 @@ services:
     environment:
       - VERBOSITY=1
       - VERBOSITY_DETAILS=0
-      - BLOCK_MALICIOUS=on
+      - BLOCK_MALICIOUS=off
       - LISTENINGPORT=53
       - PROVIDER=cloudflare
     ports:
       - 53:53/udp
     network_mode: bridge
+    restart: always
